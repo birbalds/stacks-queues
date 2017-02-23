@@ -1,24 +1,29 @@
 class Stack
-  def initialize
-    @store = Array.new
-  end
+    def initialize
+        @store = []
+    end
 
-  def push(element)
-  end
+    def push(element)
+        @store.push(element)
+    end
 
-  def pop
-  end
+    def pop
+        @store.pop
+     end
 
-  def top
-  end
+    def top
+        @store.last
+     end
 
-  def size
-  end
+    def size
+        @store.length
+     end
 
-  def empty?
-  end
+    def empty?
+        @store.empty?
+     end
 
-  def to_s
-    return @store.to_s
-  end
+    def to_s
+        @store.to_s
+    end
 end

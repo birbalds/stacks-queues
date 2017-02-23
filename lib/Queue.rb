@@ -1,22 +1,31 @@
 class Queue
-  def initialize
-  end
+    def initialize
+        @concert = []
+    end
 
-  def enqueue(element)
-  end
+    def enqueue(element)
+        @concert.push(element)
+    end
 
-  def dequeue
-  end
+    def dequeue
+        raise ArgumentError, "Can't delete elements from an empty array" if @concert == []
+        @concert.delete(@concert.first)
+    end
 
-  def front
-  end
+    def front
+        raise ArgumentError, "Can't return an element from an empty array" if @concert == []
+        @concert.first
+    end
 
-  def size
-  end
+    def size
+        @concert.length
+    end
 
-  def empty?
-  end
+    def empty?
+        @concert.empty?
+    end
 
-  def to_s
-  end
+    def to_s
+        @concert.to_s
+    end
 end
